@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Panggilan Pasien - Klinik</title>
+  <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Pemanggilan Pasien</h1>
+
+    <p class="teks" id="teksPanggilan">
+      Pasien atas nama <strong>Budi Santoso</strong>, silakan menuju ke <strong>Poli Umum</strong>.
+    </p>
+
+    <button class="btn" onclick="suarakan()">🔊 Panggil Sekarang</button>
+  </div>
+
+  <script>
+    function suarakan() {
+      const teks = document.getElementById("teksPanggilan").innerText;
+      responsiveVoice.speak(teks, "Indonesian Female");
+    }
+  </script>
+
+</body>
+</html>
